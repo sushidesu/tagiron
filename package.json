@@ -1,0 +1,17 @@
+{
+  "name": "tagiron",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "volta": {
+    "node": "17.9.0"
+  },
+  "dependencies": {
+    "elm": "^0.19.1-5"
+  },
+  "devDependencies": {
+    "elm-format": "^0.8.5",
+    "elm-live": "^4.0.2",
+    "elm-test": "^0.19.1-revision7"
+  }
+}
