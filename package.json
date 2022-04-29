@@ -6,6 +6,10 @@
   "volta": {
     "node": "17.9.0"
   },
+  "scripts": {
+    "dev": "elm-live src/Main.elm",
+    "format": "elm-format src/Main.elm --yes"
+  },
   "dependencies": {
     "elm": "^0.19.1-5"
   },
