@@ -7,7 +7,7 @@
     "node": "17.9.0"
   },
   "scripts": {
-    "dev": "elm-live src/Main.elm",
+    "dev": "elm-live src/Main.elm  --dir=./dist -- --output=./dist/index.html",
     "format": "elm-format src/Main.elm --yes"
   },
   "dependencies": {
