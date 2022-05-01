@@ -104,6 +104,6 @@ renderOmikuji omikuji =
 view : Model -> Html Msg
 view model =
     div []
-        [ p [] [ model.omikuji |> renderResult |> text ]
+        [ p [] [ text <| renderResult model.omikuji ]
         , button [ onClick Draw ] [ text "Draw" ]
         ]
