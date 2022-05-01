@@ -1,4 +1,4 @@
-module Omikuji exposing (..)
+module Omikuji exposing (Model, Msg, init, subscriptions, update, view)
 
 import Html exposing (Html, button, div, p, text)
 import Html.Events exposing (onClick)
