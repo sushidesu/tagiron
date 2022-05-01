@@ -69,18 +69,18 @@ subscriptions _ =
 -- view
 
 
-renderResult : Maybe Omikuji -> String
-renderResult result =
-    case result of
+maybeOmikujiToString : Maybe Omikuji -> String
+maybeOmikujiToString maybeOmikuji =
+    case maybeOmikuji of
         Nothing ->
             "何が出るかな"
 
         Just omikuji ->
-            renderOmikuji omikuji
+            omikujiToString omikuji
 
 
-renderOmikuji : Omikuji -> String
-renderOmikuji omikuji =
+omikujiToString : Omikuji -> String
+omikujiToString omikuji =
     case omikuji of
         LargeGood ->
             "大吉"
@@ -104,6 +104,6 @@ renderOmikuji omikuji =
 view : Model -> Html Msg
 view model =
     div []
-        [ p [] [ text <| renderResult model.omikuji ]
+        [ p [] [ text <| maybeOmikujiToString model.omikuji ]
         , button [ onClick Draw ] [ text "Draw" ]
         ]
