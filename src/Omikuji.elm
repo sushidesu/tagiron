@@ -71,12 +71,7 @@ subscriptions _ =
 
 maybeOmikujiToString : Maybe Omikuji -> String
 maybeOmikujiToString maybeOmikuji =
-    case maybeOmikuji of
-        Nothing ->
-            "何が出るかな"
-
-        Just omikuji ->
-            omikujiToString omikuji
+    Maybe.map omikujiToString maybeOmikuji |> Maybe.withDefault "何が出るかな"
 
 
 omikujiToString : Omikuji -> String
